@@ -1,0 +1,141 @@
+import React, { useState } from 'react'
+import { Table, Button, Input, Select } from 'antd'
+import { useGetProductsQuery } from './productHooks'
+
+const AddRowTable = () => {
+  const { data: products } = useGetProductsQuery()
+
+  const [data, setData] = useState([])
+  const [newRow, setNewRow] = useState()
+  const [key, setKey] = useState(1)
+
+  console.log(data)
+  const columns = [
+    {
+      title: 'Name Barang',
+      dataIndex: 'id_data_barang',
+      key: 'id_data_barang',
+      render: (text: any, record: any) => {
+        // if (record.key === 'new') {
+        console.log(record)
+        return (
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+            }}
+          >
+            <Select onChange={(value) => setNewRow(value)}>
+              {products?.map((product) => (
+                <Select.Option
+                  key={product.id_data_barang}
+                  value={product.id_data_barang}
+                >
+                  {product.nama_barang}
+                </Select.Option>
+              ))}
+            </Select>
+            <table style={{ marginTop: '10px' }}>
+              <thead>
+                <tr>
+                  <th
+                    style={{
+                      paddingBottom: '12px',
+                      paddingTop: '12px',
+                      paddingLeft: '24px',
+                      paddingRight: '24px',
+                    }}
+                  >
+                    No
+                  </th>
+                  <th
+                    style={{
+                      paddingBottom: '12px',
+                      paddingTop: '12px',
+                      paddingLeft: '24px',
+                      paddingRight: '24px',
+                    }}
+                  >
+                    Nama Barang
+                  </th>
+                  <th
+                    style={{
+                      paddingBottom: '12px',
+                      paddingTop: '12px',
+                      paddingLeft: '24px',
+                      paddingRight: '24px',
+                    }}
+                  >
+                    Stok
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    style={{
+                      paddingBottom: '12px',
+                      paddingTop: '12px',
+                      paddingLeft: '24px',
+                      paddingRight: '24px',
+                    }}
+                  >
+                    1
+                  </td>
+                  <td
+                    style={{
+                      paddingBottom: '12px',
+                      paddingTop: '12px',
+                      paddingLeft: '24px',
+                      paddingRight: '24px',
+                    }}
+                  >
+                    {
+                      products?.find((e) => e.id_data_barang === newRow)
+                        ?.nama_barang
+                    }
+                  </td>
+                  <td
+                    style={{
+                      paddingBottom: '12px',
+                      paddingTop: '12px',
+                      paddingLeft: '24px',
+                      paddingRight: '24px',
+                    }}
+                  >
+                    {
+                      products?.find((e) => e.id_data_barang === newRow)
+                        ?.jumlah_stok
+                    }
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )
+        // } else {
+        //   const selectedProduct = products?.find(
+        //     (product) => product.id_data_barang === text
+        //   )
+        //   return selectedProduct ? selectedProduct.id_data_barang : text
+        // }
+      },
+    },
+  ]
+
+  const handleAddRow = () => {
+    const newRow = { key: key, id_data_barang: '' }
+    setKey((e) => e + 1)
+    setData([...data, newRow])
+  }
+
+  return (
+    <div>
+      <Button onClick={handleAddRow}>Add Row</Button>
+      <Table dataSource={data} columns={columns} bordered rowKey="key" />
+    </div>
+  )
+}
+
+export default AddRowTable

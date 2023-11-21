@@ -1,0 +1,16 @@
+/* styles.css (atau sesuaikan dengan struktur folder Anda) */
+
+.custom-tooltip {
+  max-width: 400px; /* Lebar maksimum tooltip */
+}
+
+.custom-tooltip > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.custom-tooltip > div:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}

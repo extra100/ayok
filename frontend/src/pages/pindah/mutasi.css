@@ -1,0 +1,27 @@
+/* .container {
+  text-align: center;
+  margin-top: 20px;
+} */
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tanggal {
+  text-align: right;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.pengirim,
+.driver,
+.penerima {
+  flex: 1;
+  text-align: center;
+}
+
+.ttd {
+  margin-top: 40px;
+}
