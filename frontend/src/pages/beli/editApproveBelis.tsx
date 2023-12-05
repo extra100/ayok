@@ -245,50 +245,50 @@ const EditApproveBelis: React.FC = () => {
 
   const [showNote, setShowNote] = useState(false)
 
-  useEffect(() => {
-    if (AmbilData) {
-      if (getApproveBeliDetail) {
-        const formData = getApproveBeliDetail.reduce<{ [key: string]: Beli }>(
-          (acc, curr) => {
-            acc[curr._id] = {
-              ...curr,
-            }
-            return acc
-          },
-          {}
-        )
+  // useEffect(() => {
+  //   if (AmbilData) {
+  //     if (getApproveBeliDetail) {
+  //       const formData = getApproveBeliDetail.reduce<{ [key: string]: Beli }>(
+  //         (acc, curr) => {
+  //           acc[curr._id] = {
+  //             ...curr,
+  //           }
+  //           return acc
+  //         },
+  //         {}
+  //       )
 
-        setPoss(getApproveBeliDetail as any)
+  //       setPoss(getApproveBeliDetail as any)
 
-        form.setFieldsValue(formData)
+  //       form.setFieldsValue(formData)
 
-        getApproveBeliDetail.forEach((detail) => {
-          const multiItem = multis?.find(
-            (multi) =>
-              multi.id_data_barang === detail.id_data_barang &&
-              multi.id_harga === detail.id_harga
-          )
+  //       getApproveBeliDetail.forEach((detail) => {
+  //         const multiItem = multis?.find(
+  //           (multi) =>
+  //             multi.id_data_barang === detail.id_data_barang &&
+  //             multi.id_harga === detail.id_harga
+  //         )
 
-          if (multiItem) {
-            setHargaBadge((prevState) => ({
-              ...prevState,
-              [detail._id]: {
-                tinggi: multiItem.harga_tertinggi.toString(),
-                rendah: multiItem.harga_terendah.toString(),
-              },
-            }))
-          }
-        })
-      }
+  //         if (multiItem) {
+  //           setHargaBadge((prevState) => ({
+  //             ...prevState,
+  //             [detail._id]: {
+  //               tinggi: multiItem.harga_tertinggi.toString(),
+  //               rendah: multiItem.harga_terendah.toString(),
+  //             },
+  //           }))
+  //         }
+  //       })
+  //     }
 
-      if (getPembelianDetail && getPembelianDetail.length > 0) {
-        setSelectedSupplierId(getPembelianDetail[0].id_supplier || null)
-      }
-      if (getPembelianDetail && getPembelianDetail.length > 0) {
-        setTotalSemua(parseFloat(getPembelianDetail[0].total_semua) || null)
-      }
-    }
-  }, [AmbilData, getApproveBeliDetail, getPembelianDetail, form, multis])
+  //     if (getPembelianDetail && getPembelianDetail.length > 0) {
+  //       setSelectedSupplierId(getPembelianDetail[0].id_supplier || null)
+  //     }
+  //     if (getPembelianDetail && getPembelianDetail.length > 0) {
+  //       setTotalSemua(parseFloat(getPembelianDetail[0].total_semua) || null)
+  //     }
+  //   }
+  // }, [AmbilData, getApproveBeliDetail, getPembelianDetail, form, multis])
 
   const [price, setPrice] = useState('')
 
@@ -1092,45 +1092,6 @@ const EditApproveBelis: React.FC = () => {
         )
       },
     },
-    // {
-    //   title: 'Semua Qty 1',
-    //   dataIndex: 'semua_aty',
-    //   key: 'semua_aty',
-    //   render: (semua_aty: any) => <Input value={totalPerbaris} readOnly />,
-    // },
-
-    // {
-    //   title: ' jenis Harga ',
-    //   dataIndex: 'id_harga',
-    //   align: 'center' as 'center',
-
-    //   fixed: true,
-    //   editable: true,
-    //   render: (text: any, record: Beli) => {
-    //     return (
-    //       <div style={{ textAlign: 'center' }}>
-    //         <Form.Item
-    //           name="sasas"
-    //           rules={[
-    //             {
-    //               required: true,
-    //               message: 'Please select a Jenis Outlet!',
-    //             },
-    //           ]}
-    //           style={{ marginBottom: 0, width: 100 }}
-    //         >
-    //           <Select value={price} onChange={handleHargaChanging}>
-    //             {hargas?.map((bebas) => (
-    //               <Select.Option key={bebas._id} value={bebas._id}>
-    //                 {bebas.jenis_harga}
-    //               </Select.Option>
-    //             ))}
-    //           </Select>
-    //         </Form.Item>
-    //       </div>
-    //     )
-    //   },
-    // },
 
     {
       title: 'Qty',
