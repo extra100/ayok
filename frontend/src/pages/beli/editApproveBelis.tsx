@@ -24,14 +24,14 @@ import {
 import { Beli } from '../../types/Beli'
 import { DeleteOutlined } from '@ant-design/icons'
 import { useGetStoksQuery, useUpdateStokMutation } from '../../hooks/stokHooks'
-import { SaveOutlined } from '@ant-design/icons' // import icon save
+import { SaveOutlined } from '@ant-design/icons'
 import {
   useDeletePosMutation,
   useGetPosDetailQuery,
   useUpdatePosMutation,
 } from '../../hooks/posHooks'
 import { v4 as uuidv4 } from 'uuid'
-// import Iqra from '../Iqra'
+
 import moment from 'moment'
 
 import { Harga } from '../../types/Harga'
@@ -258,7 +258,7 @@ const EditApproveBelis: React.FC = () => {
           {}
         )
 
-        setPoss(getApproveBeliDetail)
+        setPoss(getApproveBeliDetail as any)
 
         form.setFieldsValue(formData)
 
@@ -347,8 +347,6 @@ const EditApproveBelis: React.FC = () => {
   const [selectedSupplierId, setSelectedSupplierId] = useState<string | null>(
     null
   )
-
-  //pejek
 
   const getIdHargaFromSupplier = (
     supplierIdCumeLeqTe: string | null
@@ -556,6 +554,7 @@ const EditApproveBelis: React.FC = () => {
       jumlah_pajak: '',
       jenis_pajak: '',
       tag: selectedTags,
+      sumber: '',
     }
 
     setPoss((prevPoss) => [...prevPoss, newData])
@@ -579,6 +578,7 @@ const EditApproveBelis: React.FC = () => {
         jumlah_pajak: '0',
         jenis_pajak: '--',
         tag: selectedTags.join(','),
+        sumber: '',
       },
     })
   }
@@ -2084,7 +2084,7 @@ const EditApproveBelis: React.FC = () => {
                           >
                             {banks?.map((bank: Bank) => (
                               <Select.Option key={bank._id} value={bank._id}>
-                                {bank.nama_bank}
+                                {bank.nama_akun}
                               </Select.Option>
                             ))}
                           </Select>

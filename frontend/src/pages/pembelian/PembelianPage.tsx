@@ -140,28 +140,6 @@ const PembelianPage = () => {
     setLun((prev) => !prev)
   }
 
-  // const [pemesanan, setPemesanan] = useState(false)
-
-  // useEffect(() => {
-  //   if (user && data) {
-  //     let hasilFilterOutlet
-
-  //     if (user.isAdmin) {
-  //       hasilFilterOutlet = data
-  //     } else {
-  //       hasilFilterOutlet = data.filter((d) => d.id_outlet === user.id_outlet)
-  //     }
-
-  //     let hasilFilterTotal = hasilFilterOutlet.filter(
-  //       (d) => d.sumber !== 'pemesanan'
-  //     )
-
-  //     setFilteredData(hasilFilterTotal)
-  //   }
-  // }, [data, user, pemesanan])
-  // const togglePemesanan = () => {
-  //   setPemesanan((prev) => !prev)
-  // }
   const menu = (
     <Menu key="1">
       <Menu.Item>
@@ -526,17 +504,6 @@ const PembelianPage = () => {
           >
             Lunas
           </Button>
-          {/* <Button
-            variant=""
-            style={{
-              border: '1px solid #f0f0f0',
-              borderRadius: '0px',
-              backgroundColor: pemesanan ? 'blue' : 'white',
-            }}
-            onClick={togglePemesanan}
-          >
-            Pemesanan
-          </Button> */}
         </ButtonGroup>
       </div>
       <br />
@@ -554,7 +521,7 @@ const PembelianPage = () => {
         dataSource={filteredData}
         columns={columns}
         rowKey="_id"
-        pagination={true}
+        pagination={false}
       />
     </div>
   )

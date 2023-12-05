@@ -111,8 +111,6 @@ import Pemesanan from './pages/pembelian/Pemesanan'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      {/* <Route index={true} element={<HomePage />} /> */}
-      {/* <Route path="product/:id_data_barang" element={<ProductPage />} /> */}
       <Route path="cart" element={<CartPage />} />
       <Route path="signin" element={<SigninPage />} />
       <Route path="signup" element={<SignupPage />} />
@@ -123,7 +121,6 @@ const router = createBrowserRouter(
         <Route path="/order/:id" element={<OrderPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/supplier" element={<SupplierPage />} />{' '}
-        {/* <Route path="/product" element={<ProductPage />} />{' '} */}
         <Route path="/kind" element={<KindPage />} />
         <Route path="/pelanggan" element={<PelangganPage />} />
         <Route path="/form-pelanggan" element={<AddPelangganForm />} />
@@ -156,7 +153,6 @@ const router = createBrowserRouter(
         <Route path="/multi" element={<MultiPage />} />
         <Route path="/posdua" element={<PosPages />} />
         <Route path="/form-multi" element={<AddMultiForm />} />
-        {/* <Route path="/detail/:id_pos" element={<DetailPosPage />} /> */}
         <Route path="/beli" element={<BeliPage />} />
         <Route path="/mutasi" element={<Mutasi />} />
         <Route path="/tabelmutasi" element={<ProsesMutasi />} />
@@ -167,11 +163,9 @@ const router = createBrowserRouter(
         <Route path="/pret" element={<ComponentToPrint />} />
         <Route path="/form-pindah" element={<AddPindahFormKledo />} />
         <Route path="/alamat" element={<FormAlamat />} />
-        <Route path="/ta" element={<TagPage />} />
         <Route path="/beli" element={<BeliPages />} />
         <Route path="/peso" element={<PesoPages />} />
         <Route path="/posdetail/:id_pos" element={<PosPageDetail />} />
-        {/* <Route path="/retur/:id_pos" element={<FormRetur />} /> */}
         <Route path="/returbeli/:id_beli" element={<ReturBeli />} />
         <Route path="/approvebeli/:id_beli" element={<ApproveBeli />} />
         <Route path="/approvebelis/:id_beli" element={<ApproveBelis />} />
@@ -207,14 +201,12 @@ const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <StoreProvider>
-      {/* <PayPalScriptProvider options={{ 'client-id': 'sb' }} deferLoading={true}> */}
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <RouterProvider router={router} />
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </HelmetProvider>
-      {/* </PayPalScriptProvider> */}
     </StoreProvider>
   </React.StrictMode>
 )

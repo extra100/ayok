@@ -294,7 +294,7 @@ const AkunaList = () => {
         dataSource={filteredData}
         columns={columns}
         rowKey="_id"
-        pagination={true}
+        pagination={false}
       />
     </div>
   )

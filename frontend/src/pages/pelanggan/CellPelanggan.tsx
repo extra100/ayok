@@ -67,12 +67,6 @@ const CellPelanggan: React.FC<CellPelangganProps> = ({
                 {bebaslah.nama_outlet}
               </Select.Option>
             ))}
-          {dataIndex === 'id_usaha' &&
-            struggle.map((keepFighting) => (
-              <Select.Option key={keepFighting._id} value={keepFighting._id}>
-                {keepFighting.nama_usaha}
-              </Select.Option>
-            ))}
         </Select>
       </Form.Item>
     )
