@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/extra100/ayok#readme",
   "dependencies": {
-    "babel-plugin-macros": "^3.1.0",
     "react": "^18.2.0"
   },
   "description": ""
