@@ -1245,7 +1245,7 @@ const EditPeso: React.FC = () => {
             >
               <div style={{ textAlign: 'left' }}>
                 Tag
-                <TagPage />
+                {/* <TagPage /> */}
                 <br />
               </div>
             </div>

@@ -1,8 +1,25 @@
 {
+  "name": "ayok",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && npm run build && cd ../frontend && npm install && npm run build",
+    "start": "set TG_AlLOW_MIXED=ALLOW node backend/build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/extra100/ayok.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/extra100/ayok/issues"
+  },
+  "homepage": "https://github.com/extra100/ayok#readme",
   "dependencies": {
-    "@hookform/resolvers": "^3.3.2",
-    "react-hook-form": "^7.48.2",
-    "react-select": "^5.8.0",
-    "yup": "^1.3.2"
-  }
+    "babel-plugin-macros": "^3.1.0",
+    "react": "^18.2.0"
+  },
+  "description": ""
 }

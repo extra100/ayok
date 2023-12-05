@@ -75,38 +75,38 @@ pindahRouter.post(
   })
 )
 
-pindahRouter.put(
-  '/',
-  asyncHandler(async (req, res) => {
-    const updatedKopiPindahArray: Pindah[] = req.body
+// pindahRouter.put(
+//   '/',
+//   asyncHandler(async (req, res) => {
+//     const updatedKopiPindahArray: Pindah[] = req.body
 
-    const updatedKopiPindahPromises = updatedKopiPindahArray.map(
-      async (updatedKopiPindah) => {
-        try {
-          const onlyHereSpindah: Pindah | null = await PindahModel.findOne({
-            id_pindah: updatedKopiPindah.id_pindah,
-          })
-          if (!onlyHereSpindah) {
-            return null
-          }
-          Object.assign(onlyHereSpindah, updatedKopiPindah)
-          const updatedKopiPindahResult: Pindah | null =
-            await onlyHereSpindah.save()
-          return updatedKopiPindahResult
-        } catch (error) {
-          return null
-        }
-      }
-    )
-    const updatedKopiPindahResults = await Promise.all(
-      updatedKopiPindahPromises
-    )
-    const successfulUpdates = updatedKopiPindahResults.filter(
-      (result) => result !== null
-    )
-    res.json(successfulUpdates)
-  })
-)
+//     const updatedKopiPindahPromises = updatedKopiPindahArray.map(
+//       async (updatedKopiPindah) => {
+//         try {
+//           const onlyHereSpindah: Pindah | null = await PindahModel.findOne({
+//             id_pindah: updatedKopiPindah.id_pindah,
+//           })
+//           if (!onlyHereSpindah) {
+//             return null
+//           }
+//           Object.assign(onlyHereSpindah, updatedKopiPindah)
+//           const updatedKopiPindahResult: Pindah | null =
+//             await onlyHereSpindah.save()
+//           return updatedKopiPindahResult
+//         } catch (error) {
+//           return null
+//         }
+//       }
+//     )
+//     const updatedKopiPindahResults = await Promise.all(
+//       updatedKopiPindahPromises
+//     )
+//     const successfulUpdates = updatedKopiPindahResults.filter(
+//       (result) => result !== null
+//     )
+//     res.json(successfulUpdates)
+//   })
+// )
 
 // pindahRouter.put(
 //   '/:eid',
