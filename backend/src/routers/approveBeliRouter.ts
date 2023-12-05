@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import asyncHandler from 'express-async-handler'
-import { ApproveBeliModel } from '../models/ApproveBeliModel'
+import { ApproveBeliModel } from '../models/approveBeliModel'
 
 export const approveBeliRouter = express.Router()
 

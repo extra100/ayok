@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import asyncHandler from 'express-async-handler'
-import { CicilanMutasiModel } from '../models/CicilanMutasiModel'
+import { CicilanMutasiModel } from '../models/cicilanMutasiModel'
 
 export const cicilanMutasiRouter = express.Router()
 

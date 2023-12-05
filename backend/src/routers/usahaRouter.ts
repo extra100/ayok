@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import asyncHandler from 'express-async-handler'
-import { UsahaModel } from '../models/UsahaModel'
+import { UsahaModel } from '../models/usahaModel'
 
 export const usahaRouter = express.Router()
 

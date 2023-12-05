@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import asyncHandler from 'express-async-handler'
-import { ReturBeliModel } from '../models/ReturBeliModel'
+import { ReturBeliModel } from '../models/returBeliModel'
 
 export const returBeliRouter = express.Router()
 
