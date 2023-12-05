@@ -5,7 +5,7 @@ export type CartItem = {
   nama_barang: string
   satuan: number
   stok: number
-  satuan: number
+
   harga_beli: number
   harga_jual: number
   supplier: number
