@@ -21,7 +21,7 @@ import {
 import { SaveOutlined } from '@ant-design/icons' // import icon save
 
 import { v4 as uuidv4 } from 'uuid'
-// import Iqra from '../Iqra'
+
 import moment from 'moment'
 
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'

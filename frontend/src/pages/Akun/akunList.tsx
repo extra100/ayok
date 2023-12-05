@@ -231,46 +231,7 @@ const AkunaList = () => {
                 justifyContent: 'flex-end',
                 alignItems: 'center',
               }}
-            >
-              <div
-                style={{
-                  flex: '1',
-                  border: '1px solid #e9ecef',
-                  flexBasis: '2%',
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                  alignItems: 'center',
-                  height: '30px',
-                }}
-              >
-                <Dropdown overlay={menu} placement="bottomRight">
-                  <a
-                    style={{ textDecoration: 'none' }}
-                    className="ant-dropdown-link"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <div
-                      style={{
-                        flex: '1',
-
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: '100px',
-                        color: 'black',
-                      }}
-                    >
-                      <AiOutlineShareAlt />
-                      <div style={{ marginRight: '5px', marginLeft: '5px' }}>
-                        Bagikan
-                      </div>
-
-                      <AiOutlineDown />
-                    </div>
-                  </a>
-                </Dropdown>
-              </div>
-            </div>
+            ></div>
             <div
               style={{
                 flex: '1',
@@ -280,46 +241,7 @@ const AkunaList = () => {
                 justifyContent: 'flex-end',
                 alignItems: 'center',
               }}
-            >
-              <div
-                style={{
-                  flex: '1',
-                  border: '1px solid #e9ecef',
-                  flexBasis: '2%',
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                  alignItems: 'center',
-                  height: '30px',
-                }}
-              >
-                <Dropdown overlay={menu} placement="bottomRight">
-                  <a
-                    style={{ textDecoration: 'none' }}
-                    className="ant-dropdown-link"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <div
-                      style={{
-                        flex: '1',
-
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: '100px',
-                        color: 'black',
-                      }}
-                    >
-                      <AiOutlinePrinter />
-                      <div style={{ marginRight: '5px', marginLeft: '5px' }}>
-                        Print
-                      </div>
-
-                      <AiOutlineDown />
-                    </div>
-                  </a>
-                </Dropdown>
-              </div>
-            </div>
+            ></div>
           </div>
         </div>
         <div

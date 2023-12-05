@@ -181,7 +181,7 @@ const StokPage: React.FC = () => {
           </div>
         </Form>
       </div>
-      <StokTable
+      {/* <StokTable
         form2hereOneAtPage={bentuk}
         outlets={outletsData || []}
         asal={filteredData}
@@ -198,7 +198,7 @@ const StokPage: React.FC = () => {
         dapatkanOutlet={dapatkanOutlet}
         showIdH={showIdH}
         showA={showA}
-      />
+      /> */}
     </Form>
   )
 }

@@ -10,8 +10,6 @@ import { HelmetProvider } from 'react-helmet-async'
 
 import App from './App'
 import './index.css'
-// import HomePage from './pages/HomePage'
-// import ProductPage from './pages/product/ProductPage'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -55,8 +53,6 @@ import JualPage from './pages/jual/JualPage'
 import MultiPage from './pages/multi/MultiPage'
 import AddMultiForm from './pages/multi/AddMultiForm'
 
-// import DetailPosPage from './pages/DetailPosPage'
-
 import Mutasi from './pages/mutasi/MutasiPage'
 import ProsesMutasi from './pages/mutasi/ProsesMutasi'
 import MutasiPage from './pages/mutasi/MutasiPage'
@@ -84,9 +80,6 @@ import PembelianPage from './pages/pembelian/PembelianPage'
 import AddPindahFormKledo from './pages/pindah/addPindahFormKledo'
 import ProsesPindahFormKledo from './pages/pindah/ProsesPindahFormKledo'
 import PenjualanPageKledo from './pages/penjualan/PenjualanPageKledo'
-
-// import FormRetur from './pages/retur/FormRetur'
-// import PosDetailPage from './pages/pos/DetailPagePos'
 
 import HalamanMutasi from './pages/pindah/halamanMutasi'
 import PesoPages from './pages/peso/pesoPages'

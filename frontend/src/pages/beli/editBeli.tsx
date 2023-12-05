@@ -534,6 +534,7 @@ const EditBeli: React.FC = () => {
       jumlah_pajak: '',
       jenis_pajak: '',
       tag: selectedTags,
+      sumber: '',
     }
 
     setBelis((prevBelis) => [...prevBelis, newData])
@@ -557,6 +558,7 @@ const EditBeli: React.FC = () => {
         jumlah_pajak: '0',
         jenis_pajak: '--',
         tag: selectedTags.join(','),
+        sumber: '',
       },
     })
   }
@@ -2031,7 +2033,7 @@ const EditBeli: React.FC = () => {
                           >
                             {banks?.map((bank: Bank) => (
                               <Select.Option key={bank._id} value={bank._id}>
-                                {bank.nama_bank}
+                                {bank.nama_akun}
                               </Select.Option>
                             ))}
                           </Select>
@@ -2253,7 +2255,7 @@ const EditBeli: React.FC = () => {
                       <td>{cicilan.cicil}</td>
                       <td>{cicilan.piutang}</td>
 
-                      <td>{bank ? bank.nama_bank : ''}</td>
+                      <td>{bank ? bank.nama_akun : ''}</td>
                     </tr>
                   )
                 })}

@@ -92,11 +92,6 @@ export default function PlaceOrderPage() {
                   <ListGroup.Item key={item._id}>
                     <Row className="align-items-center">
                       <Col md={6}>
-                        <img
-                          src={item.image}
-                          alt={item.nama_barang}
-                          className="img-fluid rounded thumbnail"
-                        ></img>{' '}
                         <Link to={`/product/${item.id_data_barang}`}>
                           {item.nama_barang}
                         </Link>

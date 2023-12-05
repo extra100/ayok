@@ -704,47 +704,6 @@ const Akunai: React.FC = () => {
             ></div>
           </div>
 
-          <div
-            style={{
-              display: 'flex',
-            }}
-          >
-            <div
-              style={{
-                flex: '1',
-                flexBasis: '20%',
-                textAlign: 'right',
-              }}
-            >
-              <div style={{ textAlign: 'left' }}>
-                <br />
-                <Form.Item>
-                  <DateRange
-                    defaultValue={
-                      AmbilData && getAkunaDetail && getAkunaDetail.length > 0
-                        ? [
-                            getAkunaDetail[0]?.tanggal_mulai || '',
-                            getAkunaDetail[0]?.tanggal_akhir || '',
-                          ]
-                        : undefined
-                    }
-                    difference={
-                      AmbilData && getAkunaDetail && getAkunaDetail.length > 0
-                        ? getAkunaDetail[0]?.selisih
-                        : undefined
-                    }
-                    onChange={(dates) => {
-                      setSelectedDates(dates)
-                    }}
-                    onDifferenceChange={(diff) => {
-                      setSelectedDifference(diff)
-                    }}
-                    onSave={handleDateRangeSave}
-                  />
-                </Form.Item>
-              </div>
-            </div>
-          </div>
           <>
             <div
               style={{
@@ -851,7 +810,7 @@ const Akunai: React.FC = () => {
                   setSelectedTags(newTags)
                 }
               }}
-              onSearch={handleInputChange}
+              // onSearch={handleInputChange}
               onBlur={handleSaveTag}
               dropdownRender={(menu) => (
                 <div>

@@ -789,7 +789,6 @@ const ReturBeli: React.FC = (kledo: any) => {
               >
                 <div className="my-select-container">
                   <span style={{ textAlign: 'left' }}>Tags</span>
-                  <TagPage />
                 </div>
               </div>
             </div>

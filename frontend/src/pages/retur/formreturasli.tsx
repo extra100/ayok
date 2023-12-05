@@ -605,7 +605,7 @@ const FormRetur: React.FC = (kledo: any) => {
                         pelanggans?.find(
                           (outlet) =>
                             outlet._id === getPenjualanDetail[0]?.id_pelanggan
-                        )?.nama_pelanggan
+                        )?.type_kontak
                       }
                     </Link>
                   ) : undefined}
@@ -651,17 +651,7 @@ const FormRetur: React.FC = (kledo: any) => {
                     borderRadius: '0px 0px 0px',
                     flex: '1',
                   }}
-                >
-                  <DatePindahForm
-                    defaultValue={
-                      AmbilData &&
-                      getPenjualanDetail &&
-                      getPenjualanDetail.length > 0
-                        ? getPenjualanDetail[0]?.tanggal_mulai
-                        : undefined
-                    }
-                  />
-                </div>
+                ></div>
               </div>
             </div>
             <div style={{ flex: '1', textAlign: 'right' }}>
@@ -754,7 +744,6 @@ const FormRetur: React.FC = (kledo: any) => {
               >
                 <div className="my-select-container">
                   <span style={{ textAlign: 'left' }}>Tags</span>
-                  <TagPage />
                 </div>
               </div>
             </div>

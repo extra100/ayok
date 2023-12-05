@@ -35,7 +35,7 @@ const Uang: React.FC = () => {
     },
   ]
 
-  return <Table dataSource={dataSource} columns={columns} pagination={true} />
+  return <Table dataSource={dataSource} columns={columns} pagination={false} />
 }
 
 export default Uang

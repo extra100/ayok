@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Popconfirm, Select, Table, Typography } from 'antd'
 import { Usaha } from '../../types/Usaha'
-import EditableCell from './CellUSaha'
+
 import {
   AiOutlineArrowLeft,
   AiOutlineLike,
@@ -193,12 +193,6 @@ const UsahaTable: React.FC<UsahaTableProps> = ({
 
   return (
     <Table
-      className="table no-vertical-lines"
-      components={{
-        body: {
-          cell: EditableCell,
-        },
-      }}
       dataSource={asal}
       columns={columns}
       rowClassName="editable-row"
