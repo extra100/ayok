@@ -48,7 +48,7 @@ const ListKasBangke: React.FC = () => {
   }
   const columns = [
     {
-      title: 'Nama Akun',
+      title: 'Nama Akusn',
       dataIndex: 'nama_akun',
       key: 'nama_akun',
     },
